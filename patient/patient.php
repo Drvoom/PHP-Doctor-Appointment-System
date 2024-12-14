@@ -61,7 +61,7 @@ $userRow=mysqli_fetch_array($res,MYSQLI_ASSOC);
 					<ul class="nav navbar-nav">
 						<ul class="nav navbar-nav">
 							<li><a href="patient.php">Home</a></li>
-							<!-- <li><a href="profile.php?patientId=<?php echo $userRow['icPatient']; ?>" >Profile</a></li> -->
+							<li><a href="profile.php?patientId=<?php echo $userRow['icPatient']; ?>" >Profile</a></li>
 							<li><a href="patientapplist.php?patientId=<?php echo $userRow['icPatient']; ?>">Appointment</a></li>
 						</ul>
 					</ul>

@@ -14,16 +14,17 @@
 //      define('_DATABASE_NAME','db_healthcare');
 //      define('_DATABASE_USER_NAME','root');
 //      define('_DATABASE_PASSWORD','');
- 
+
 //      $MySQLiconn = new MySQLi(_HOST_NAME,_DATABASE_USER_NAME,_DATABASE_PASSWORD,_DATABASE_NAME);
-  
+
 //      if($MySQLiconn->connect_errno)
 //      {
 //        die("ERROR : -> ".$MySQLiconn->connect_error);
 //      }
-// ?>
+// 
+?>
 <!-- mysql -->
- <?php 
+<?php
 // if(!mysql_connect("mysql.hostinger.my","u346953953_admin","database123"))
 // {
 //      die('oops connection problem ! --> '.mysql_error());
@@ -32,7 +33,8 @@
 // {
 //      die('oops database selection problem ! --> '.mysql_error());
 // }
-//  ?>
+//  
+?>
 
 <!-- mysqli -->
 <?php
@@ -45,11 +47,15 @@
 //   }
 ?>
 <?php
-$con = mysqli_connect("localhost","root","","db_healthcare");
+$localhost = "localhost";
+$user_name = "root";
+$password = "";
+$db_name = "db_healthcare";
 
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-  ?>
+$con = mysqli_connect($localhost, $user_name, $password, $db_name);
+
+if (!$con) {
+  die("connection failed");
+}
+
+?>
